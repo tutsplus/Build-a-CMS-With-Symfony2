@@ -1,0 +1,29 @@
+custom_cms_cms_page:
+    resource: "@CustomCMSBundle/Resources/config/routing/page.yml"
+    prefix:   /cms/page
+
+custom_cms_cms_category:
+    resource: "@CustomCMSBundle/Resources/config/routing/category.yml"
+    prefix:   /cms/category
+
+custom_cms_cms_user:
+    resource: "@CustomCMSBundle/Resources/config/routing/user.yml"
+    prefix:   /cms/user
+
+custom_cms_homepage:
+    path:     /
+    defaults: { _controller: CustomCMSBundle:Default:index }
+
+custom_cms_page_display:
+    path: /page/{id}
+    defaults: { _controller: CustomCMSBundle:Default:display }
+
+login:
+    path: /login
+    defaults: { _controller: CustomCMSBundle:Security:login }
+
+login_check:
+    path: /login_check
+
+logout:
+    pattern: /logout

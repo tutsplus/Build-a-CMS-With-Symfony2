@@ -1,0 +1,30 @@
+cms_page:
+    path:     /
+    defaults: { _controller: "CustomCMSBundle:Page:index" }
+
+cms_page_show:
+    path:     /{id}/show
+    defaults: { _controller: "CustomCMSBundle:Page:show" }
+
+cms_page_new:
+    path:     /new
+    defaults: { _controller: "CustomCMSBundle:Page:new" }
+
+cms_page_create:
+    path:     /create
+    defaults: { _controller: "CustomCMSBundle:Page:create" }
+    requirements: { _method: post }
+
+cms_page_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CustomCMSBundle:Page:edit" }
+
+cms_page_update:
+    path:     /{id}/update
+    defaults: { _controller: "CustomCMSBundle:Page:update" }
+    requirements: { _method: post|put }
+
+cms_page_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CustomCMSBundle:Page:delete" }
+    requirements: { _method: post|delete }
